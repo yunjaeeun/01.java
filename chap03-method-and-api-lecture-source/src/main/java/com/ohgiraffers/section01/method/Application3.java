@@ -6,9 +6,10 @@ public class Application3 {
 
     public static void main(String[] args) {
 
-        int global = 20;                      // 지역 변수
+        int global = 20;                       // 지역 변수
         System.out.println("global 출력: " + global);
         System.out.println("global 출력: " + Application3.global);        // 클래스명.변수명을 하면 클래스 변수를 호출할 수 있다.
+
 
         /* 수업목표. 메소드 전달 인자와 매개 변수에 대해 이해하고 메소드 호출 시 활용할 수 있다. */
         /* 필기
