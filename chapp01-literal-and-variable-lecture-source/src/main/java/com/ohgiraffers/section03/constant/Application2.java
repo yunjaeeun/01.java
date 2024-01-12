@@ -18,6 +18,5 @@ public class Application2 {
         final int minAge = 20;      // 낙타봉 표기법 역시 사용은 가능하다 변수와 구분하기 힘들기 때문에 지양된다.
 
 
-
     }
 }
