@@ -32,7 +32,5 @@ public class Application1 {
 
         System.out.println("String의 결과: " + testStr);
         System.out.println("StringBuilder의 결과: " + testSb);
-
-
     }
 }
