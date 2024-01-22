@@ -31,14 +31,14 @@ public class Computer extends Product {
         System.out.println("Computer 클래스의 부모 필드까지 모두 초기화하는 생성자 호출함...");
     }
 
-//    @Override
-//    public String toString() {
-//        return "Computer{" +
-//                "cpu='" + cpu + '\'' +
-//                ", ssd=" + ssd +
-//                ", ram=" + ram +
-//                ", operationSystem='" + operationSystem + '\'' +
-//                "} " +
-//                super.toString();
-//    }
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "cpu='" + cpu + '\'' +
+                ", ssd=" + ssd +
+                ", ram=" + ram +
+                ", operationSystem='" + operationSystem + '\'' +
+                "} " + "Product{" +
+                "code='" + super.toString();
+    }
 }
