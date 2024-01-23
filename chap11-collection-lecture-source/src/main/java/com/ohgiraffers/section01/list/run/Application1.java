@@ -78,6 +78,40 @@ public class Application1 {
         aList.remove(1);
         System.out.println(aList);
 
+        aList.add(null);
+        System.out.println(aList);
 
+        /* 설명. ArrayList를 활용해 정렬을 진행해 보자. */
+        List<String> stringList = new ArrayList<>();
+        stringList.add("apple");
+        stringList.add("orange");
+        stringList.add("banana");
+        stringList.add("mango");
+        stringList.add("grape");
+
+        System.out.println("stringList = " + stringList);
+
+        /* 설명. Collections의 sort() 메소드를 활용한 정렬 */
+        Collections.sort(stringList);
+        System.out.println("stringList = " + stringList);
+
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(4);
+        integerList.add(14);
+        integerList.add(43);
+        integerList.add(95);
+        integerList.add(7);
+
+        System.out.println("integerList = " + integerList);
+
+        Collections.sort(integerList);
+        System.out.println("integerList = " + integerList);
+
+        /* 설명. 내림차순으로 바꾸기 위해 ArrayList에서 LinkedList로 교체 */
+        stringList = new LinkedList<>(stringList);          // stringList를 List로 선언했기 때문에 그의 자손 클래스에도 담을 수 있다.
+        Iterator<String> iter =((LinkedList<String>)stringList).descendingIterator();
+        while (iter.hasNext()){
+            System.out.println(iter.next());
+        }
     }
 }

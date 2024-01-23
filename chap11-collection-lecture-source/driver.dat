@@ -1,0 +1,6 @@
+#jdbc driver
+#Tue Jan 23 15:30:16 KST 2024
+password=abc123
+driver=oracle.jdbc.driver.OracleDriver
+user=swcamp
+url=jdbc\:oracle\:thin\:@127.0.0.1\:1521\:xe
