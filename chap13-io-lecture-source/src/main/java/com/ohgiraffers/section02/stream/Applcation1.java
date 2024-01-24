@@ -25,12 +25,18 @@ public class Applcation1 {
             * */
             int input = 0;
             while ((input = fin.read()) != -1 ) {
-                System.out.println((char)input);
+                System.out.print((char)input);
             }
         } catch (FileNotFoundException e) {
             System.out.println("해당 파일 없는데?!!");
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+               if(fin != null) fin.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
