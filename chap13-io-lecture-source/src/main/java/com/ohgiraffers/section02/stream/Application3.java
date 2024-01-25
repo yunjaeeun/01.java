@@ -11,18 +11,18 @@ public class Application3 {
         FileOutputStream fout = null;
 
         try {
-            fout = new FileOutputStream("src/main/java/com/ohgiraffers/section02/stream/testOutputStream.txt");     // 출력스트림은 해당 위치에 파일이 없으면 만듦.
+            fout = new FileOutputStream("src/main/java/com/ohgiraffers/section02/stream/testOutputStream.txt");
 //            fout.write('a');
 //            fout.write(97);
 
             byte[] bArr = new byte[]{'a', 'p', 'p', 'l', 'e'};
-//            for(byte b: bArr) {               // apple 라는 문자가 들어감.
+//            for(byte b: bArr) {
 //                fout.write(b);
 //            }
 
-//            fout.write(bArr);                 // apple 라는 문자가 들어감.
+//            fout.write(bArr);
 
-            fout.write(bArr, 1, 3);     // ppl 라는 문자가 들어감.
+            fout.write(bArr, 1, 3);
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

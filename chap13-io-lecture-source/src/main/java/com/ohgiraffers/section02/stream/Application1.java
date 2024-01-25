@@ -17,8 +17,7 @@ public class Application1 {
             fin = new FileInputStream(
                     "src/main/java/com/ohgiraffers/section02/stream/testInputStream.txt");
 
-//            System.out.println(fin.read());                       // 형변환을 하지 않으면 아스키 코드값을 가져옴.
-//            System.out.println((char)fin.read());                 // 1byte만 읽음 출력값: H
+//            System.out.println((char)fin.read());
 
             /* 필기.
              *  FileInputStream에서 제공하는 read()메소드를 활용하여 데이터를 1바이트씩 읽을 수 있다.
@@ -27,7 +26,7 @@ public class Application1 {
              *  (반환한 값이 int이기 때문에 문자로 활용하기 위해서는 char로 형변환을 진행한다.)
             * */
             int input = 0;
-//            while((input = fin.read()) != -1) {                   // fin.read() 가 2번씩 읽히기 때문에 input에 값을 저장해 1번씩만 읽게 만듦.
+//            while((input = fin.read()) != -1) {
 //                System.out.println((char)input);
 //            }
 
@@ -37,7 +36,7 @@ public class Application1 {
                 arr.add((char) input);
             }
 
-            for(char ch: arr) {                         // char형을 char형으로 꺼내기 때문에 오토 언박싱이 일어남.
+            for(char ch: arr) {
                 System.out.print(ch);
             }
 

@@ -15,7 +15,7 @@ public class Application1 {
         BufferedWriter bw = null;
         try {
             bw = new BufferedWriter(
-                    new FileWriter("src/main/java/com/ohgiraffers/section03/filterstream/testBuffered.txt", true)); // 추가로 true 적으면 이어쓰기 가능.
+                    new FileWriter("src/main/java/com/ohgiraffers/section03/filterstream/testBuffered.txt", true));
 
             bw.write("제목: 세종대왕님\n");
             bw.write("드디어 세종대왕님이 만족하시겠네!\n");
@@ -47,8 +47,8 @@ public class Application1 {
             br = new BufferedReader(
                     new FileReader("src/main/java/com/ohgiraffers/section03/filterstream/testBuffered.txt"));
 
-            String str = "";                                // 한 줄씩 반환하기 때문에 String형임.
-            while ((str = br.readLine()) != null) {         // BufferedReader는 읽을 값이 없으면 null을 반환함.
+            String str = "";
+            while ((str = br.readLine()) != null) {
                 System.out.println(str);
             }
         } catch (Exception e) {

@@ -7,8 +7,7 @@ public class Application2 {
 
         /* 수업목표. 표준입출력을 이해하고 활용할 수 있다. */
 
-        // Scanner sc = new Scanner(System.in)과 같음
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));       // System.in : 콘솔로부터 입력을 받음
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("문자열 입력: ");
         try {
@@ -31,7 +30,7 @@ public class Application2 {
         bw = new BufferedWriter(osw);
 
         try {
-            bw.write("println이 좋은거구만!");
+            bw.write("println이 좋은거구만!~");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
