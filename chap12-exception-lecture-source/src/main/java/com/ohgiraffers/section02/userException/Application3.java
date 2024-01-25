@@ -11,6 +11,7 @@ public class Application3 {
         ExceptionTest2 et = new ExceptionTest2();
         try {
             et.checkEnoughMoney(-20000, 50000);
+//            et.checkEnoughMoney(20000, 10000);
         } catch (PriceNegativeExcption | MoneyNegativeException e) {
             System.out.println("두 개의 예외 처리: " + e.getMessage());
         } catch (NotEnoughMoneyException e) {

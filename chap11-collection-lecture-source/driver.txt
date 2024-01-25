@@ -1,5 +1,5 @@
 #jdbc driver2
-#Tue Jan 23 15:30:16 KST 2024
+#Wed Jan 24 21:40:45 KST 2024
 password=abc123
 driver=oracle.jdbc.driver.OracleDriver
 user=swcamp
