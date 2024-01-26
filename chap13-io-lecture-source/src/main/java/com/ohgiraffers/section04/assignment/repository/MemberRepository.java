@@ -2,7 +2,6 @@ package com.ohgiraffers.section04.assignment.repository;
 
 import com.ohgiraffers.section04.assignment.aggregate.BloodType;
 import com.ohgiraffers.section04.assignment.aggregate.Member;
-import com.ohgiraffers.section04.assignment.stream.MyObjectOutput;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,18 +13,11 @@ public class MemberRepository {
     /* 설명. 프로그램이 켜지자 마자(MemberRepository()가 실행되자 마자) 파일에 dummy 데이터 추가 및 입력받기 */
     public MemberRepository() {
         ArrayList<Member> members = new ArrayList<>();
+        members.add(new Member(1, "user01", "pass01", 35, new String[]{"발레", "수영"}, BloodType.A));
+        members.add(new Member(2, "user02", "pass02", 16, new String[]{"게임", "달리기", "숨쉬기"}, BloodType.AB));
+        members.add(new Member(3, "user03", "pass03", 27, new String[]{"영화시청"}, BloodType.B));
 
-        /* 설명. 회원가입 기능 추가 후 이제는 파일이 기존에 존재하면(처음이 아니므로) 회원 3명으로 초기화 하기를 하지 않는다. */
-        File file = new File("src/main/java/com/ohgiraffers/section04/assignment/db/memberDB.dat");
-        if(!file.exists()) {
-        members.add(new Member(1, "user01", "pass01", 35,
-                new String[]{"발레", "수영"}, BloodType.A));
-        members.add(new Member(2, "user02", "pass02", 16,
-                new String[]{"게임", "달리기", "숨쉬기"}, BloodType.AB));
-        members.add(new Member(3, "user03", "pass03", 27,
-                new String[]{"영화시청"}, BloodType.B));
-            saveMembers(members);
-        }
+        saveMembers(members);
         loadMembers();
 
 //        System.out.println("==========repository에서 회원정보 다 읽어왔는지 확인=========");
@@ -95,57 +87,5 @@ public class MemberRepository {
             if(m.getMemNo() == memNo) return m;
         }
         return null;
-    }
-
-    public int selectLastMemberNo() {
-//        Member lastMember = memberList.get(memberList.size() -1);       // 가장 최근에 가입한 회원
-//        return lastMember.getMemNo();                                   // 그 회원의 번호
-        return memberList.get(memberList.size() -1).getMemNo();           // 한줄코딩 가능.
-    }
-
-    /* 설명. 기존 회원(객체)에 이어서 파일 출력을 하고 추가 한 객체의 수를 반환 (feat.DML 작업의 결과는 int)*/
-    public int registMember(Member member) {
-        
-        return saveMember(member);
-    }
-
-    /* 설명. 객체 출력을 할 예정인데 기존 ObjectOutPutStream 대신 새로 정의한 스트림으로 회원 한명 파일 출력해서 int 반환하기(feat.이어쓰기) */
-    private int saveMember(Member member) {
-        MyObjectOutput moo = null;
-        try {
-            moo = new MyObjectOutput(new BufferedOutputStream(
-                    new FileOutputStream("src/main/java/com/ohgiraffers/section04/assignment/db/memberDB.dat", true)));
-
-            /* 설명. 파일로 객체 하나 출력하기 */
-            moo.writeObject(member);
-
-            /* 설명. repository의 memberList에도 추가 */
-            memberList.add(member);
-
-            moo.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                if(moo != null) moo.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return 1;
-    }
-
-    public int deleteMember(int memNo) {
-        for (int i = 0; i < memberList.size(); i++) {
-            if(memberList.get(i).getMemNo() == memNo){
-
-                /* 설명. 프로그램 상에서 회원을 관리하는 memberList 뿐 아니라 Db(회원 파일)도 같이 적용되게 함. */
-                memberList.remove(i);
-                saveMembers(memberList);
-                return 1;
-            }
-        }
-
-        return 0;
     }
 }

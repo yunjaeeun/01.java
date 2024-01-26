@@ -17,9 +17,9 @@ public class Application2 {
         try {
             fr = new FileReader("src/main/java/com/ohgiraffers/section02/stream/testReader.txt");
 
-            int readChar = 0;                               // 1. while문 조건에서도 읽고 출력할 때도 읽기 때문에 변수에 담아 값을 저장함. 2. while을 읽을 때 마다 변수를 정의할 수 없어서 밖에 선언해줌
-            while((readChar = fr.read()) != -1) {           // 파일의 끝을 읽으면 -1이 출력되므로 -1이 아닐때가지 조건 선언
-                System.out.print((char)readChar);           // 자료를 int값으로 불러오기 때문에 변수를 활용해줌.
+            int readChar = 0;
+            while((readChar = fr.read()) != -1) {
+                System.out.print((char)readChar);
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

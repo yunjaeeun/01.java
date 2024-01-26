@@ -10,8 +10,10 @@ public class Application3 {
         try {
             dos = new DataOutputStream(
                     new FileOutputStream("src/main/java/com/ohgiraffers/section03/filterstream/testData.txt"));
+            
+            /* 설명. data타입 별로 해당 데이터 타입에 맞는 출력 메소드를 활용하여 파일에 출력하기(순서 중요!) */
 
-            dos.writeUTF("홍길동");            // 자료형별로 보내면 사람의 눈으로 해석이 안되므로 InputStream으로 해석 해야함.
+            dos.writeUTF("홍길동");
             dos.writeInt(20);
             dos.writeChar('A');
 
@@ -29,22 +31,28 @@ public class Application3 {
             throw new RuntimeException(e);
         } finally {
             try {
-                if (dos != null) dos.close();
+                if(dos != null) dos.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
 
         DataInputStream dis = null;
+
         try {
             dis = new DataInputStream(
                     new FileInputStream("src/main/java/com/ohgiraffers/section03/filterstream/testData.txt"));
-            while (true) {
-                System.out.println(dis.readUTF());                      // 자료형을 넣은 순서대로 출력하지 않으면 이상한 결과가 출력됨.
+
+           /* 설명. 입력받을 때도 출력 때의 순서를 지켜서 입력 받는다. */
+           while(true) {
+                System.out.println(dis.readUTF());
                 System.out.println(dis.readInt());
                 System.out.println(dis.readChar());
-            }
-        } catch (EOFException e) {          // 파일을 다 읽어내면 EOFException 예외가 발생하므로 이를 이용하여 구문을 작성하면 break를 작성 할 필요가 없음.
+           }
+
+        } catch (EOFException e) {
+
+            /* 설명. data 입출력은 EOFException을 활용하여 파일의 끝까지 입력 받는 것을 처리할 수 있다. */
             System.out.println("파일 다 읽어냄");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -52,10 +60,21 @@ public class Application3 {
             throw new RuntimeException(e);
         } finally {
             try {
-                if (dis != null) dis.close();
+                if(dis != null) dis.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

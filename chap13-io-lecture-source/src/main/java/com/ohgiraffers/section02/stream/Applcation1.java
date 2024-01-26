@@ -18,7 +18,7 @@ public class Applcation1 {
 //            System.out.println((char)fin.read());
 
             /* 필기.
-             *  FileInputStream에서 제공하는 read()메소드를 활용하여 데이터를 1바이트 씩 읽을 수 있다.
+             *  FileInputStream에서 제공하는 read()메소드를 활용하여 데이터를 1바이트 씩 읽을 ㅅ ㅜ있다.
              *  read()메소드가 반환하는 값은 int인데 더 이상 데이터가 존재하지 않으면(EOF: End Of File) -1을
              *  반환하게 된다. 이 원리를 활용하여 파일의 끝까지 1바이트씩 읽고 처리할 수있다.
              *  (반환한 값이 int이기 때문에 문자로 활용하기 위해서는 char로 형변환을 진행한다.)

@@ -14,7 +14,7 @@ public class Application2 {
         } finally {
 
             /* 설명. try 구문에서 예외가 발생하던 발생하지 않던 반드시 실행해야 할 부분이 있다면 작성하는 부분 */
-            System.out.println("finally 블럭의 내용이 동작함");
+            System.out.println("finall 블럭의 내용이 동작함");
         }
 
         System.out.println("프로그램을 종료합니다.");

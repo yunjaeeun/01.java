@@ -15,14 +15,14 @@ public class Application3 {
 //            fout.write('a');
 //            fout.write(97);
 
-            byte[] bArr = new byte[]{'a', 'p', 'p', 'l', 'e'};          // 데이터를 한번에 넣기 위해서 배열을 이용.
+            byte[] bArr = new byte[]{'a', 'p', 'p', 'l', 'e'};
 //            for(byte b: bArr) {
 //                fout.write(b);
 //            }
 
 //            fout.write(bArr);
 
-            fout.write(bArr, 1, 3);     // 1번 인덱스부터 3개
+            fout.write(bArr, 1, 3);
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
