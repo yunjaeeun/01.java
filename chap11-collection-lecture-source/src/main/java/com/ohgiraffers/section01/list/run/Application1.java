@@ -9,9 +9,12 @@ public class Application1 {
 //        ArrayList <Object> aList = new ArrayList<>();
         ArrayList aList = new ArrayList();          // 다이아몬드 연산자 없는 제네릭 클래스는 <Object>와 같다
 
-        List list = new ArrayList();                // 컬렉션은 다형성을 적용한 형태로 많이들 쓴다.
 //        Collection col = new ArrayList<>();
+        List list = new ArrayList();                // 컬렉션은 다형성을 적용한 형태로 많이들 쓴다.
+//        list = new Vector();                      // 하위 메소드를 자유롭게 부를 수 있기 때문에 유지보수 측면에서 다형성을 적용한 형태로 쓰는게 좋다.
 
+        /* 설명.
+         *  값을 저장할 때 한가지의 자료형이 아니여도 담을 수 있다는 점에서 배열과 차이나지만 다양한 자료를 담으면 타입 안정성에서 벗어나기 때문에  */
         aList.add("apple");         // String -> Object
         aList.add(123);             // 123 -> (Integer)123 -> Object
         aList.add(45.67);
@@ -109,7 +112,7 @@ public class Application1 {
 
         /* 설명. 내림차순으로 바꾸기 위해 ArrayList에서 LinkedList로 교체 */
         stringList = new LinkedList<>(stringList);          // stringList를 List로 선언했기 때문에 그의 자손 클래스에도 담을 수 있다.
-        Iterator<String> iter =((LinkedList<String>)stringList).descendingIterator();
+        Iterator<String> iter =((LinkedList<String>)stringList).descendingIterator();       // 뒤집어서 리스트를 반환하는게 아니라 iterator를 반환함.
         while (iter.hasNext()){
             System.out.println(iter.next());
         }

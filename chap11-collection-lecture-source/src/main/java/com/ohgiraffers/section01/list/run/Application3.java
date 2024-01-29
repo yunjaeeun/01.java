@@ -40,9 +40,9 @@ public class Application3 {
         while (iter.hasNext()) {
             String fruit = iter.next();
             System.out.println(fruit);
-            System.out.println(fruit);
-            System.out.println(fruit);
-            System.out.println(fruit);
+//            System.out.println(fruit);
+//            System.out.println(fruit);
+//            System.out.println(fruit);
         }
         System.out.println();
 
