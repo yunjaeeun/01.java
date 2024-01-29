@@ -1,6 +1,7 @@
 package com.ohgiraffers.section04.assignment.repository;
 
 import com.ohgiraffers.section04.assignment.aggregate.BloodType;
+import com.ohgiraffers.section04.assignment.aggregate.MBTI;
 import com.ohgiraffers.section04.assignment.aggregate.Member;
 import com.ohgiraffers.section04.assignment.stream.MyObjectOutput;
 
@@ -20,11 +21,11 @@ public class MemberRepository {
         if(!file.exists()) {
             ArrayList<Member> members = new ArrayList<>();
             members.add(new Member(1, "user01", "pass01", 20,
-                    new String[]{"발레", "수영"}, BloodType.A));
+                    new String[]{"발레", "수영"}, BloodType.A, MBTI.ISFP));
             members.add(new Member(2, "user02", "pass02", 10,
-                    new String[]{"게임", "영화시청"}, BloodType.B));
+                    new String[]{"게임", "영화시청"}, BloodType.B, MBTI.ENTP));
             members.add(new Member(3, "user03", "pass03", 15,
-                    new String[]{"음악감상", "독서", "명상"}, BloodType.O));
+                    new String[]{"음악감상", "독서", "명상"}, BloodType.O, MBTI.INTJ));
 
             saveMembers(members);
         }

@@ -25,7 +25,8 @@ public class Application3 {
                                                 .collect(Collectors.toList());
 
 	    System.out.println("collectorCollection = " + collectorCollection);
-	    
+
+		/* 설명. joining() 메소드는 요소들을 하나로 합쳐서 하나의 문자열로 바꿔주는 메소드이다. */
 	    String str = memberList
 	    				.stream()
 		                .map(Member::getMemberName)

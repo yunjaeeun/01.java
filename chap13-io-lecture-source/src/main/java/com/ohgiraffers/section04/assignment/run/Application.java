@@ -2,6 +2,7 @@ package com.ohgiraffers.section04.assignment.run;
 
 
 import com.ohgiraffers.section04.assignment.aggregate.BloodType;
+import com.ohgiraffers.section04.assignment.aggregate.MBTI;
 import com.ohgiraffers.section04.assignment.aggregate.Member;
 import com.ohgiraffers.section04.assignment.service.MemberService;
 
@@ -49,11 +50,10 @@ public class Application {
 
     /* 설명. 사용자로부터 회원번호를 제외한 정보를 입력 받아(회원가입용 정보) Member타입으로 반환하는 메소드(파싱 및 가공처리) */
     private static Member signUp() {
+        Scanner sc = new Scanner(System.in);
         Member newInfo = null;
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("아이디를 입력하세요: ");
-        String id = sc.nextLine();
+        String id = mm.checkID();
 
         System.out.print("패스워드를 입력하세요: ");
         String pwd = sc.nextLine();
@@ -73,22 +73,17 @@ public class Application {
         }
         newInfo = new Member(id, pwd, age, hobbies);
 
-        System.out.print("혈액형을 입력하세요(A, AB, B, O): ");
-        String bloodType = sc.nextLine().toUpperCase();
-        BloodType bt = null;
-        switch(bloodType) {
-            case "A": bt = BloodType.A; break;
-            case "AB": bt = BloodType.AB; break;
-            case "B": bt = BloodType.B; break;
-            case "O": bt = BloodType.O; break;
-        }
+        BloodType bloodType = mm.checkBT();
+        MBTI mbti = mm.checkMBTI();
+
 
         /* 필기.
          *  회원으로부터 회원가입을 위한 정보를 입력받아 Member 타입객체 하나로 가공 처리할 때 방법이 두 가지가 있다.
          *  1. 생성자 방식(장: 한줄 코딩 가능, 단: 따로 생성자 추가)
          *  2. setter 방식(장: 초기화 할 갯수 수정 용이, 단: 코딩 줄 수 늘어날 수 있음)
         * */
-        newInfo.setBloodType(bt);
+        newInfo.setBloodType(bloodType);
+        newInfo.setMbti(mbti);
 
         return newInfo;
     }

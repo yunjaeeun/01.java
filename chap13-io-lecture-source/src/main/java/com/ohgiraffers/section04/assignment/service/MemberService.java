@@ -1,14 +1,18 @@
 package com.ohgiraffers.section04.assignment.service;
 
+import com.ohgiraffers.section04.assignment.aggregate.BloodType;
+import com.ohgiraffers.section04.assignment.aggregate.MBTI;
 import com.ohgiraffers.section04.assignment.aggregate.Member;
 import com.ohgiraffers.section04.assignment.repository.MemberRepository;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /* 설명. 트랜잭션 성공실패 여부 확인 및 회원 관련 비즈니스 로직 처리하는 클래스 */
 public class MemberService {
 
     private final MemberRepository mr = new MemberRepository();
+    Scanner sc = new Scanner(System.in);
 
     public MemberService() {
     }
@@ -62,6 +66,52 @@ public class MemberService {
         }
 
         System.out.println("회원 탈퇴에 실패하였습니다.");
+    }
+
+    public String checkID() {
+        System.out.print("아이디를 입력하세요: ");
+        String id = sc.nextLine();
+        return id;
+    }
+
+    public MBTI checkMBTI() {
+        while (true) {
+            System.out.print("MBTI를 입력하세요: ");
+            String mbti = sc.nextLine().toUpperCase();
+            MBTI mt = null;
+            switch(mbti) {
+                case "ISTJ" : mt = MBTI.ISTJ; return mt;
+                case "ISTP" : mt = MBTI.ISTP; return mt;
+                case "ISFJ" : mt = MBTI.ISFJ; return mt;
+                case "ISFP" : mt = MBTI.ISFP; return mt;
+                case "INTJ" : mt = MBTI.INTJ; return mt;
+                case "INTP" : mt = MBTI.INTP; return mt;
+                case "INFJ" : mt = MBTI.INFJ; return mt;
+                case "INFP" : mt = MBTI.INFP; return mt;
+                case "ESTJ" : mt = MBTI.ESTJ; return mt;
+                case "ESTP" : mt = MBTI.ESTP; return mt;
+                case "ESFJ" : mt = MBTI.ESFJ; return mt;
+                case "ESFP" : mt = MBTI.ESFP; return mt;
+                case "ENTJ" : mt = MBTI.ENTJ; return mt;
+                case "ENTP" : mt = MBTI.ENTP; return mt;
+                case "ENFJ" : mt = MBTI.ENFJ; return mt;
+                case "ENFP" : mt = MBTI.ENFP; return mt;
+                default: System.out.println("다시 입력해 주세요");
+            }
+        }
+    }
+    public BloodType checkBT() {
+        while (true) {
+            System.out.print("혈액형을 입력하세요(A, AB, B, O): ");
+            String bloodType = sc.nextLine().toUpperCase();
+            BloodType bt = null;
+            switch(bloodType) {
+                case "A": bt = BloodType.A; return bt;
+                case "AB": bt = BloodType.AB; return bt;
+                case "B": bt = BloodType.B; return bt;
+                case "O": bt = BloodType.O; return bt;
+            }
+        }
     }
 }
 

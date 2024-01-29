@@ -22,9 +22,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2bTjH7uMu8tte4PGwWByIfFAWmV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,11 +32,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Application2.executor": "Run",
+    "Application.com.ohgiraffers.section02.uses.subsection03.terminal.Application3.executor": "Run",
+    "Application.com.ohgiraffers.section02.uses.subsection03.terminal.Application4.executor": "Run",
     "Gradle.chap16-stream-lecture-source [:Application1.main()].executor": "Run",
     "Gradle.chap16-stream-lecture-source [:Application2.main()].executor": "Run",
+    "Gradle.chap16-stream-lecture-source [:Application3.main()].executor": "Run",
+    "Gradle.chap16-stream-lecture-source [:Application4.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/codes/javaStudy/study01-control",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,13 +51,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.com.ohgiraffers.section02.uses.subsection02.intermediate.Application2">
+  <component name="RunManager" selected="Application.com.ohgiraffers.section02.uses.subsection03.terminal.Application4">
+    <configuration name="Application1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection03.terminal.Application1" />
+      <module name="chap16-stream-lecture-source.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection03.terminal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section01.intro.Application2" />
+      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection03.terminal.Application2" />
       <module name="chap16-stream-lecture-source.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohgiraffers.section01.intro.*" />
+          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection03.terminal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -59,34 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.ohgiraffers.section02.uses.subsection01.generation.Application1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection01.generation.Application1" />
-      <module name="chap16-stream-lecture-source.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection01.generation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.ohgiraffers.section02.uses.subsection01.generation.Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection01.generation.Application2" />
-      <module name="chap16-stream-lecture-source.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection01.generation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.ohgiraffers.section02.uses.subsection02.intermediate.Application1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection02.intermediate.Application1" />
+    <configuration name="Application4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection02.intermediate.Application4" />
       <module name="chap16-stream-lecture-source.main" />
       <extension name="coverage">
         <pattern>
@@ -98,12 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.ohgiraffers.section02.uses.subsection02.intermediate.Application2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection02.intermediate.Application2" />
+    <configuration name="com.ohgiraffers.section02.uses.subsection03.terminal.Application3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection03.terminal.Application3" />
       <module name="chap16-stream-lecture-source.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection02.intermediate.*" />
+          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection03.terminal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ohgiraffers.section02.uses.subsection03.terminal.Application4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ohgiraffers.section02.uses.subsection03.terminal.Application4" />
+      <module name="chap16-stream-lecture-source.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ohgiraffers.section02.uses.subsection03.terminal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection02.intermediate.Application2" />
-        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection02.intermediate.Application1" />
-        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection01.generation.Application2" />
-        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection01.generation.Application1" />
+        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection03.terminal.Application4" />
+        <item itemvalue="Application.com.ohgiraffers.section02.uses.subsection03.terminal.Application3" />
         <item itemvalue="Application.Application2" />
+        <item itemvalue="Application.Application1" />
+        <item itemvalue="Application.Application4" />
       </list>
     </recent_temporary>
   </component>
@@ -137,6 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706245873300</updated>
       <workItem from="1706245874340" duration="6085000" />
+      <workItem from="1706486371121" duration="4915000" />
     </task>
     <servers />
   </component>
