@@ -9,7 +9,7 @@ public class Application1 {
         /* 설명.
          *  예외 처리를 가장 많이 사용하게 되는 상황에서 try-catch 구문을 실제 상황과 유사하게 연습해 보자.
          *  (문법보다는 호출 흐름에 신경 써 보기)
-         * */
+        * */
 
         System.out.println(new File("test.dat").getAbsoluteFile());
 
@@ -22,11 +22,11 @@ public class Application1 {
 
 //            System.out.println(br.readLine());
 
-            while ((s = br.readLine()) != null) {
+            while((s=br.readLine()) != null) {
                 System.out.println(s);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("파일 못 찾겠어");
+            System.out.println("파일 못 찼겠엉!~");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -38,15 +38,15 @@ public class Application1 {
             try {
 
                 /* 설명.
-                 *  스트림이 생성되지 않았을 때 접근해서 close()메소드를 호출하게 되면 NullPointerExcepction이
+                 *  스트림이 생성되지 않았을 때 접근해서 close()메소드를 호출하게 되면 NullPointerException이
                  *  발생할 수 있다. 따라서 NullPointerException 방지를 위한 if문을 활용하게 된다.
                 * */
-                if (br != null) {
+                if(br != null) {
 
                     /* 설명.
                      *  입출력에서 사용한 스트림을 닫아주는 메소드이다.
-                     *  API에서 확인해보면 IOException을 throw하는 메소드이기 때문에
-                     *  finally 블럭 안이라도 또 예외처리를 중첩으로 해 주어야 한다.
+                     *  API에서 확인해보면 IOException을 throws하는 메소드이기 때문에
+                     *  finally 블럭 안이라도 또 예외 처리를 중첩으로 해 주어야 한다.
                     * */
                     br.close();
                 }

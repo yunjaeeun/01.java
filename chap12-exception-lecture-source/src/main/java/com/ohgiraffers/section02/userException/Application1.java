@@ -1,9 +1,8 @@
-package com.ohgiraffers.section02.userException;
+package com.ohgiraffers.section02.userexception;
 
-
-import com.ohgiraffers.section02.userException.exception.MoneyNegativeException;
-import com.ohgiraffers.section02.userException.exception.NotEnoughMoneyException;
-import com.ohgiraffers.section02.userException.exception.PriceNegativeExcption;
+import com.ohgiraffers.section02.userexception.exception.MoneyNegativeException;
+import com.ohgiraffers.section02.userexception.exception.NotEnoughMoneyException;
+import com.ohgiraffers.section02.userexception.exception.PriceNegativeException;
 
 public class Application1 {
     public static void main(String[] args) {
@@ -14,17 +13,16 @@ public class Application1 {
         try {
 //            et.checkEnoughMoney(-30000, 50000);
 //            et.checkEnoughMoney(30000, -50000);
-//            et.checkEnoughMoney(50000, 30000);
-            et.checkEnoughMoney(30000, 50000);
-        } //catch (Exception e) {}    // 다형성에 의해서 상위 클래스인 Exception에서 혼자 처리가 가능하지만 제일 앞으로 오면 안됨.
-//        catch (PriceNegativeExcption e) {
+            et.checkEnoughMoney(50000, 30000);
+        }
+//        catch (PriceNegativeException e) {
 //            System.out.println(e.getMessage());
 //        } catch (NotEnoughMoneyException e) {
 //            System.out.println(e.getMessage());
 //        } catch (MoneyNegativeException e) {
 //            System.out.println(e.getMessage());
 //        }
-        catch (Exception e) {               // 다형성을 활용한 catch 처리 방식
+        catch (Exception e) {                    // 다형성을 활용한 catch 처리 방식
             System.out.println("예외 메시지: " + e.getMessage());
         }
     }

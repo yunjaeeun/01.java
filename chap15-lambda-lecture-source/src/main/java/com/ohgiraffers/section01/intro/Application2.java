@@ -11,9 +11,9 @@ public class Application2 {
         OuterCalculator.Multiple multi = (x, y) -> x * y;
         OuterCalculator.Divide divide = (x, y) -> x / y;
 
-        System.out.println("20과 10의 합: " + sum.sumTwoNumber(20,10));
-        System.out.println("20과 10의 차: " + minus.minusTwoNumber(20,10));
-        System.out.println("20과 10의 곱: " + multi.multiplyTwoNumber(20,10));
-        System.out.println("20과 10의 나누기: " + divide.divideTwoNumber(20,10));
+        System.out.println("20과 10의 합: " + sum.sumTwoNumber(20, 10));
+        System.out.println("20과 10의 차: " + minus.minusTwoNumber(20, 10));
+        System.out.println("20과 10의 곱: " + multi.multiplyTwoNumber(20, 10));
+        System.out.println("20과 10의 나누기: " + divide.divideTwoNumber(20, 10));
     }
 }

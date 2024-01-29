@@ -12,7 +12,7 @@ public class Application2 {
         try (BufferedReader br = new BufferedReader(new FileReader("test.dat"))) {
             String s;
 
-            while ((s = br.readLine()) != null) {
+            while((s=br.readLine()) != null) {
                 System.out.println(s);
             }
         } catch (FileNotFoundException e) {

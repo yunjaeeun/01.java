@@ -1,4 +1,4 @@
-package com.ohgiraffers.section04.Override;
+package com.ohgiraffers.section04.override;
 
 import java.io.IOException;
 
@@ -9,8 +9,6 @@ public class Application {
             cs.method();
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } catch (Exception e) {
-
         }
     }
 }

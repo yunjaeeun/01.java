@@ -1,6 +1,5 @@
 package com.ohgiraffers.section02.functionalInterface;
 
-import java.util.Objects;
 import java.util.function.Predicate;
 
 public class Application5 {
@@ -11,5 +10,6 @@ public class Application5 {
         Predicate<Object> predicate = value -> value instanceof String;
         System.out.println("문자열인지 확인: " + predicate.test("123"));
         System.out.println("문자열인지 확인: " + predicate.test(123));
+
     }
- }
+}
