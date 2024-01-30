@@ -20,7 +20,7 @@ public class ParameterizedTests {
     /* 설명. 가능한 자료형으로는 short, int, long, float, double, char, java.lang패키지 클래스들(String 포함) */
     @DisplayName("홀수 짝수 판별 테스트")
     @ParameterizedTest
-    @ValueSource(ints = {1, 3, -1, 15, 123})
+    @ValueSource(ints = {1, 3, -1, 15, 123})                // @ValueSource -> 기본 자료형으로 배열을 만들어서 테스트 메소드의 매개변수로 넘어가게 한다(파라미터의 갯수만큼 반복을 돌려줌)
     void testIsOdd(int number) {
 
         //when
@@ -33,7 +33,7 @@ public class ParameterizedTests {
     /* 목차. 2. @NullSource와 @EmptySource */
     @DisplayName("null값 테스트")
     @ParameterizedTest
-    @NullSource
+    @NullSource                                              // @NullSource -> 따로 추가하지 않아도 Null 값을 매개변수로 넘어가게 해줌
     void testIsNull(String input) {
 
         //when
@@ -45,7 +45,7 @@ public class ParameterizedTests {
 
     @DisplayName("empty값 테스트")
     @ParameterizedTest
-    @EmptySource
+    @EmptySource                                            // @EmptySource -> 따로 추가하지 않아도 비어있는 값을 매개변수로 넘어가게 해줌
     void testIsEmpty(String input) {
 
         //when
@@ -119,7 +119,7 @@ public class ParameterizedTests {
     @DisplayName("영문자를 대문자로 변경하는지 확인")
     @ParameterizedTest
 //    @CsvSource({"test,TEST", "tEst,TEST", "JavaScript, JAVASCRIPT"})
-    @CsvSource(
+    @CsvSource(                                         // Csv -> 키와 밸류의 개념을 가진 파일, @CsvSource -> 구분자를 기분으로 파라미터에 각각 넣어주는 기능
             value = {"test:TEST", "tEst:TEST", "JavaScript: JAVASCRIPT"},
             delimiter = ':'
     )
@@ -161,7 +161,7 @@ public class ParameterizedTests {
 
     @DisplayName("메소드 소스를 활용한 대문자 변환 테스트")
     @ParameterizedTest
-    @MethodSource("providerStringSource")
+    @MethodSource("providerStringSource")               // @MethodSource를 통해 미리 Arguments를 만들어 놓고 메소드를 호출해 파라미터에 넣어줄 수 있음
 //    @MethodSourceStringSource
     void testToUpperCaseWithMethodSource(String input, String verifyValue) {
 
@@ -172,7 +172,7 @@ public class ParameterizedTests {
         Assertions.assertEquals(verifyValue, actual);
     }
 
-    /* 설명. 어노테이션을 만들었기 때문에 메소드명을 일일히 작성하지 안아도 된다. */
+    /* 설명. 어노테이션을 만들었기 때문에 메소드명을 일일히 작성하지 않아도 된다. */
 //    @Documented
 //    @Target(ElementType.METHOD)
 //    @Retention(RetentionPolicy.RUNTIME)
@@ -182,7 +182,7 @@ public class ParameterizedTests {
     /* 목차. 6. ArgumentsProvider를 이용한 메소드 소스 사용 */
     @DisplayName("두 수를 더한 결과를 정상적으로 반환하는지 테스트")
     @ParameterizedTest(name = "[{index}] {0} + {1} = {2} (이)가 맞는지 확인")
-    @ArgumentsSource(SumTwoNumbersArgumentsProvider.class)
+    @ArgumentsSource(SumTwoNumbersArgumentsProvider.class)              // Argument를 반환하는 메소드를 모아 클래스로 정의 후 불러올 수 있음.
     void testSumTwoNumbers(int num1, int num2, int verifyValue) {
 
         //when

@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 public class JupiterAssertionsTests {
 
     /* 수업목표. Junit5에서 제공하는 Assertions에서 제공하는 메소드에 대해 이해하고 활용할 수 있다. */
@@ -78,6 +77,7 @@ public class JupiterAssertionsTests {
         //given
         String firstName = "길동";
         String lastName = "홍";
+
 
         //when
         Person person = new Person(firstName,lastName);
