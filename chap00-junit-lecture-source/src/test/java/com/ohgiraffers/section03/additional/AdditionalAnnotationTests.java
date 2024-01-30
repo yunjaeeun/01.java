@@ -32,10 +32,10 @@ public class AdditionalAnnotationTests {
     public void testSecond(){}
 
     @Test
-    @Order(1)               // 테스트 메소드 우선순위 설정
+    @Order(1)
     public void testFirst(){}
 
-    @RepeatedTest(10)       // 테스트 메소드 반복설정
+    @RepeatedTest(10)
     public void testRepeat() {
 
     }

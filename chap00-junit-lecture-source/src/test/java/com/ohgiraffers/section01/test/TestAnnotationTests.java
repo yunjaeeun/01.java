@@ -27,7 +27,7 @@ public class TestAnnotationTests {
 
     /* 설명. 과거에는 공백문자를 언더스코어로 표기한 한글 메소드 형터래 테스트 메소드를 작성하기도 했다. */
     @Test
-    @DisplayName("우선순위가 높음")
+    @DisplayName("우선순위기 높음")
     public void 매개변수로_1과_3을_넘겼을_때_합계를_int형으로_잘_반환하는지_확인() {
 
     }
