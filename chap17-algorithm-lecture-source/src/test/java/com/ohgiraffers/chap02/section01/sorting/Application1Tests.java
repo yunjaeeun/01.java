@@ -11,9 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class ApplicationTests {
+class Application1Tests {
 
     private static int input1, input2;
     private static int[] act1, act2;
