@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/* 수업목표. BFS와 방문 배열을 활용한 최단거리 문제를 해결할 수 있다. */
 public class Application3 {
     public static BufferedReader toBufferedReader(String str) {
         InputStream is = new ByteArrayInputStream(str.getBytes());
