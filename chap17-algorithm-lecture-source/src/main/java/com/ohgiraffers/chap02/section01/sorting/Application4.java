@@ -61,7 +61,7 @@ public class Application4 {
 
             /* 설명. lo 포인터의 위치가 hi 포인터를 앞지르려고 하면 hi 위치를 반환한다.(분할 기준 반환) */
             if (lo >= hi) {                         // lo 인덱스와 hi 인덱스
-                return hi;
+                return hi;                          // hi값을 가지고 나감.
             }
             swap(arr, lo, hi);
         }
